@@ -7,12 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E42F333221B0232C00ECBB02 /* 圆柱面.png in Resources */ = {isa = PBXBuildFile; fileRef = E42F332F21B0232C00ECBB02 /* 圆柱面.png */; };
-		E42F333321B0232C00ECBB02 /* 旋转双曲面.png in Resources */ = {isa = PBXBuildFile; fileRef = E42F333021B0232C00ECBB02 /* 旋转双曲面.png */; };
-		E42F333421B0232C00ECBB02 /* 圆锥面.png in Resources */ = {isa = PBXBuildFile; fileRef = E42F333121B0232C00ECBB02 /* 圆锥面.png */; };
 		E42F333721B0420300ECBB02 /* MultipeerSession.m in Sources */ = {isa = PBXBuildFile; fileRef = E42F333621B0420300ECBB02 /* MultipeerSession.m */; };
-		E42F333921B0498900ECBB02 /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = E42F333821B0498900ECBB02 /* share.png */; };
-		E42F333B21B0498D00ECBB02 /* shareDefault.png in Resources */ = {isa = PBXBuildFile; fileRef = E42F333A21B0498D00ECBB02 /* shareDefault.png */; };
 		E47A1E3321AECE0F00477055 /* SYCPlaneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E47A1E3221AECE0F00477055 /* SYCPlaneModel.m */; };
 		E47A1E3821AEE60C00477055 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E47A1E3721AEE60C00477055 /* Main.storyboard */; };
 		E47A1E3C21AFB06000477055 /* SYCSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E47A1E3B21AFB06000477055 /* SYCSelectionViewController.m */; };
@@ -27,13 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E42F332F21B0232C00ECBB02 /* 圆柱面.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "圆柱面.png"; sourceTree = "<group>"; };
-		E42F333021B0232C00ECBB02 /* 旋转双曲面.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "旋转双曲面.png"; sourceTree = "<group>"; };
-		E42F333121B0232C00ECBB02 /* 圆锥面.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "圆锥面.png"; sourceTree = "<group>"; };
 		E42F333521B0420300ECBB02 /* MultipeerSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultipeerSession.h; sourceTree = "<group>"; };
 		E42F333621B0420300ECBB02 /* MultipeerSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultipeerSession.m; sourceTree = "<group>"; };
-		E42F333821B0498900ECBB02 /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
-		E42F333A21B0498D00ECBB02 /* shareDefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shareDefault.png; sourceTree = "<group>"; };
 		E47A1E3121AECE0F00477055 /* SYCPlaneModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYCPlaneModel.h; sourceTree = "<group>"; };
 		E47A1E3221AECE0F00477055 /* SYCPlaneModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYCPlaneModel.m; sourceTree = "<group>"; };
 		E47A1E3721AEE60C00477055 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -96,11 +86,6 @@
 		E4D2C2A021AD66BE001CEF21 /* RealityMath */ = {
 			isa = PBXGroup;
 			children = (
-				E42F333021B0232C00ECBB02 /* 旋转双曲面.png */,
-				E42F332F21B0232C00ECBB02 /* 圆柱面.png */,
-				E42F333121B0232C00ECBB02 /* 圆锥面.png */,
-				E42F333821B0498900ECBB02 /* share.png */,
-				E42F333A21B0498D00ECBB02 /* shareDefault.png */,
 				E47A1E3921AFAFDB00477055 /* Selection View Controller */,
 				E4D2C2A121AD66BE001CEF21 /* AppDelegate.h */,
 				E4D2C2A221AD66BE001CEF21 /* AppDelegate.m */,
@@ -180,14 +165,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4D2C2BE21AD6CB0001CEF21 /* Assets.scnassets in Resources */,
-				E42F333221B0232C00ECBB02 /* 圆柱面.png in Resources */,
-				E42F333421B0232C00ECBB02 /* 圆锥面.png in Resources */,
 				E4D2C2AE21AD66BF001CEF21 /* LaunchScreen.storyboard in Resources */,
-				E42F333321B0232C00ECBB02 /* 旋转双曲面.png in Resources */,
-				E42F333B21B0498D00ECBB02 /* shareDefault.png in Resources */,
 				E4D2C2AB21AD66BF001CEF21 /* Assets.xcassets in Resources */,
 				E47A1E3821AEE60C00477055 /* Main.storyboard in Resources */,
-				E42F333921B0498900ECBB02 /* share.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
