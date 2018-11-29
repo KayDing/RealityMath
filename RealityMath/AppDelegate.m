@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "SYCBaseViewController.h"
+#import "Selection View Controller/SYCSelectionViewController.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface AppDelegate ()
 
@@ -16,7 +19,18 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] init];
+    SYCSelectionViewController *selectionVC = [[SYCSelectionViewController alloc] init];
+    [self.window setRootViewController:selectionVC];
+    [self.window makeKeyAndVisible];
+    
+    [AVCaptureDevice requestAccessForMediaType:AVMediaTypeVideo completionHandler:^(BOOL granted) {
+        if (granted) {
+            NSLog(@"允许了");
+        }else{
+            NSLog(@"拒绝了");
+        }
+    }];
     return YES;
 }
 

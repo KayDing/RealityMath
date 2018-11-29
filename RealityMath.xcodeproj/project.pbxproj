@@ -7,25 +7,52 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E42F333221B0232C00ECBB02 /* 圆柱面.png in Resources */ = {isa = PBXBuildFile; fileRef = E42F332F21B0232C00ECBB02 /* 圆柱面.png */; };
+		E42F333321B0232C00ECBB02 /* 旋转双曲面.png in Resources */ = {isa = PBXBuildFile; fileRef = E42F333021B0232C00ECBB02 /* 旋转双曲面.png */; };
+		E42F333421B0232C00ECBB02 /* 圆锥面.png in Resources */ = {isa = PBXBuildFile; fileRef = E42F333121B0232C00ECBB02 /* 圆锥面.png */; };
+		E42F333721B0420300ECBB02 /* MultipeerSession.m in Sources */ = {isa = PBXBuildFile; fileRef = E42F333621B0420300ECBB02 /* MultipeerSession.m */; };
+		E42F333921B0498900ECBB02 /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = E42F333821B0498900ECBB02 /* share.png */; };
+		E42F333B21B0498D00ECBB02 /* shareDefault.png in Resources */ = {isa = PBXBuildFile; fileRef = E42F333A21B0498D00ECBB02 /* shareDefault.png */; };
+		E47A1E3321AECE0F00477055 /* SYCPlaneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E47A1E3221AECE0F00477055 /* SYCPlaneModel.m */; };
+		E47A1E3821AEE60C00477055 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E47A1E3721AEE60C00477055 /* Main.storyboard */; };
+		E47A1E3C21AFB06000477055 /* SYCSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E47A1E3B21AFB06000477055 /* SYCSelectionViewController.m */; };
+		E47A1E3F21AFB0CD00477055 /* SelectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E47A1E3E21AFB0CD00477055 /* SelectionCell.m */; };
 		E4D2C2A321AD66BE001CEF21 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D2C2A221AD66BE001CEF21 /* AppDelegate.m */; };
-		E4D2C2A621AD66BE001CEF21 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D2C2A521AD66BE001CEF21 /* ViewController.m */; };
-		E4D2C2A921AD66BE001CEF21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4D2C2A721AD66BE001CEF21 /* Main.storyboard */; };
 		E4D2C2AB21AD66BF001CEF21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4D2C2AA21AD66BF001CEF21 /* Assets.xcassets */; };
 		E4D2C2AE21AD66BF001CEF21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4D2C2AC21AD66BF001CEF21 /* LaunchScreen.storyboard */; };
 		E4D2C2B121AD66BF001CEF21 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D2C2B021AD66BF001CEF21 /* main.m */; };
+		E4D2C2B921AD6724001CEF21 /* SYCBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D2C2B821AD6724001CEF21 /* SYCBaseViewController.m */; };
+		E4D2C2BC21AD678C001CEF21 /* SYCPlane.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D2C2BB21AD678C001CEF21 /* SYCPlane.m */; };
+		E4D2C2BE21AD6CB0001CEF21 /* Assets.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = E4D2C2BD21AD6CB0001CEF21 /* Assets.scnassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E42F332F21B0232C00ECBB02 /* 圆柱面.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "圆柱面.png"; sourceTree = "<group>"; };
+		E42F333021B0232C00ECBB02 /* 旋转双曲面.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "旋转双曲面.png"; sourceTree = "<group>"; };
+		E42F333121B0232C00ECBB02 /* 圆锥面.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "圆锥面.png"; sourceTree = "<group>"; };
+		E42F333521B0420300ECBB02 /* MultipeerSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultipeerSession.h; sourceTree = "<group>"; };
+		E42F333621B0420300ECBB02 /* MultipeerSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultipeerSession.m; sourceTree = "<group>"; };
+		E42F333821B0498900ECBB02 /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
+		E42F333A21B0498D00ECBB02 /* shareDefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shareDefault.png; sourceTree = "<group>"; };
+		E47A1E3121AECE0F00477055 /* SYCPlaneModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYCPlaneModel.h; sourceTree = "<group>"; };
+		E47A1E3221AECE0F00477055 /* SYCPlaneModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYCPlaneModel.m; sourceTree = "<group>"; };
+		E47A1E3721AEE60C00477055 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		E47A1E3A21AFB06000477055 /* SYCSelectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYCSelectionViewController.h; sourceTree = "<group>"; };
+		E47A1E3B21AFB06000477055 /* SYCSelectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYCSelectionViewController.m; sourceTree = "<group>"; };
+		E47A1E3D21AFB0CD00477055 /* SelectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectionCell.h; sourceTree = "<group>"; };
+		E47A1E3E21AFB0CD00477055 /* SelectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectionCell.m; sourceTree = "<group>"; };
 		E4D2C29E21AD66BE001CEF21 /* RealityMath.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealityMath.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4D2C2A121AD66BE001CEF21 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E4D2C2A221AD66BE001CEF21 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E4D2C2A421AD66BE001CEF21 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E4D2C2A521AD66BE001CEF21 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		E4D2C2A821AD66BE001CEF21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E4D2C2AA21AD66BF001CEF21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4D2C2AD21AD66BF001CEF21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E4D2C2AF21AD66BF001CEF21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4D2C2B021AD66BF001CEF21 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E4D2C2B721AD6724001CEF21 /* SYCBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYCBaseViewController.h; sourceTree = "<group>"; };
+		E4D2C2B821AD6724001CEF21 /* SYCBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYCBaseViewController.m; sourceTree = "<group>"; };
+		E4D2C2BA21AD678C001CEF21 /* SYCPlane.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYCPlane.h; sourceTree = "<group>"; };
+		E4D2C2BB21AD678C001CEF21 /* SYCPlane.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYCPlane.m; sourceTree = "<group>"; };
+		E4D2C2BD21AD6CB0001CEF21 /* Assets.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Assets.scnassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +66,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E47A1E3921AFAFDB00477055 /* Selection View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E47A1E3A21AFB06000477055 /* SYCSelectionViewController.h */,
+				E47A1E3B21AFB06000477055 /* SYCSelectionViewController.m */,
+				E47A1E3D21AFB0CD00477055 /* SelectionCell.h */,
+				E47A1E3E21AFB0CD00477055 /* SelectionCell.m */,
+			);
+			path = "Selection View Controller";
+			sourceTree = "<group>";
+		};
 		E4D2C29521AD66BE001CEF21 = {
 			isa = PBXGroup;
 			children = (
@@ -58,13 +96,26 @@
 		E4D2C2A021AD66BE001CEF21 /* RealityMath */ = {
 			isa = PBXGroup;
 			children = (
+				E42F333021B0232C00ECBB02 /* 旋转双曲面.png */,
+				E42F332F21B0232C00ECBB02 /* 圆柱面.png */,
+				E42F333121B0232C00ECBB02 /* 圆锥面.png */,
+				E42F333821B0498900ECBB02 /* share.png */,
+				E42F333A21B0498D00ECBB02 /* shareDefault.png */,
+				E47A1E3921AFAFDB00477055 /* Selection View Controller */,
 				E4D2C2A121AD66BE001CEF21 /* AppDelegate.h */,
 				E4D2C2A221AD66BE001CEF21 /* AppDelegate.m */,
-				E4D2C2A421AD66BE001CEF21 /* ViewController.h */,
-				E4D2C2A521AD66BE001CEF21 /* ViewController.m */,
-				E4D2C2A721AD66BE001CEF21 /* Main.storyboard */,
+				E4D2C2B721AD6724001CEF21 /* SYCBaseViewController.h */,
+				E4D2C2B821AD6724001CEF21 /* SYCBaseViewController.m */,
+				E42F333521B0420300ECBB02 /* MultipeerSession.h */,
+				E42F333621B0420300ECBB02 /* MultipeerSession.m */,
+				E47A1E3121AECE0F00477055 /* SYCPlaneModel.h */,
+				E47A1E3221AECE0F00477055 /* SYCPlaneModel.m */,
+				E4D2C2BA21AD678C001CEF21 /* SYCPlane.h */,
+				E4D2C2BB21AD678C001CEF21 /* SYCPlane.m */,
+				E4D2C2BD21AD6CB0001CEF21 /* Assets.scnassets */,
 				E4D2C2AA21AD66BF001CEF21 /* Assets.xcassets */,
 				E4D2C2AC21AD66BF001CEF21 /* LaunchScreen.storyboard */,
+				E47A1E3721AEE60C00477055 /* Main.storyboard */,
 				E4D2C2AF21AD66BF001CEF21 /* Info.plist */,
 				E4D2C2B021AD66BF001CEF21 /* main.m */,
 			);
@@ -128,9 +179,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4D2C2BE21AD6CB0001CEF21 /* Assets.scnassets in Resources */,
+				E42F333221B0232C00ECBB02 /* 圆柱面.png in Resources */,
+				E42F333421B0232C00ECBB02 /* 圆锥面.png in Resources */,
 				E4D2C2AE21AD66BF001CEF21 /* LaunchScreen.storyboard in Resources */,
+				E42F333321B0232C00ECBB02 /* 旋转双曲面.png in Resources */,
+				E42F333B21B0498D00ECBB02 /* shareDefault.png in Resources */,
 				E4D2C2AB21AD66BF001CEF21 /* Assets.xcassets in Resources */,
-				E4D2C2A921AD66BE001CEF21 /* Main.storyboard in Resources */,
+				E47A1E3821AEE60C00477055 /* Main.storyboard in Resources */,
+				E42F333921B0498900ECBB02 /* share.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,23 +198,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4D2C2A621AD66BE001CEF21 /* ViewController.m in Sources */,
+				E42F333721B0420300ECBB02 /* MultipeerSession.m in Sources */,
+				E47A1E3321AECE0F00477055 /* SYCPlaneModel.m in Sources */,
+				E4D2C2BC21AD678C001CEF21 /* SYCPlane.m in Sources */,
 				E4D2C2B121AD66BF001CEF21 /* main.m in Sources */,
+				E4D2C2B921AD6724001CEF21 /* SYCBaseViewController.m in Sources */,
+				E47A1E3F21AFB0CD00477055 /* SelectionCell.m in Sources */,
 				E4D2C2A321AD66BE001CEF21 /* AppDelegate.m in Sources */,
+				E47A1E3C21AFB06000477055 /* SYCSelectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E4D2C2A721AD66BE001CEF21 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E4D2C2A821AD66BE001CEF21 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E4D2C2AC21AD66BF001CEF21 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
