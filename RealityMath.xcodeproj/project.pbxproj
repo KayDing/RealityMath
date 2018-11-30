@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F53C75221B0DAAD00DD1FE4 /* ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F53C75121B0DAAD00DD1FE4 /* ARKit.framework */; };
+		2F53C75421B0DAC100DD1FE4 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F53C75321B0DAC100DD1FE4 /* SceneKit.framework */; };
 		E42F333721B0420300ECBB02 /* MultipeerSession.m in Sources */ = {isa = PBXBuildFile; fileRef = E42F333621B0420300ECBB02 /* MultipeerSession.m */; };
 		E47A1E3321AECE0F00477055 /* SYCPlaneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E47A1E3221AECE0F00477055 /* SYCPlaneModel.m */; };
 		E47A1E3821AEE60C00477055 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E47A1E3721AEE60C00477055 /* Main.storyboard */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F53C75121B0DAAD00DD1FE4 /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = System/Library/Frameworks/ARKit.framework; sourceTree = SDKROOT; };
+		2F53C75321B0DAC100DD1FE4 /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
 		E42F333521B0420300ECBB02 /* MultipeerSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultipeerSession.h; sourceTree = "<group>"; };
 		E42F333621B0420300ECBB02 /* MultipeerSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultipeerSession.m; sourceTree = "<group>"; };
 		E47A1E3121AECE0F00477055 /* SYCPlaneModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYCPlaneModel.h; sourceTree = "<group>"; };
@@ -50,12 +54,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F53C75421B0DAC100DD1FE4 /* SceneKit.framework in Frameworks */,
+				2F53C75221B0DAAD00DD1FE4 /* ARKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F53C75021B0DAAD00DD1FE4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2F53C75321B0DAC100DD1FE4 /* SceneKit.framework */,
+				2F53C75121B0DAAD00DD1FE4 /* ARKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E47A1E3921AFAFDB00477055 /* Selection View Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +87,7 @@
 			children = (
 				E4D2C2A021AD66BE001CEF21 /* RealityMath */,
 				E4D2C29F21AD66BE001CEF21 /* Products */,
+				2F53C75021B0DAAD00DD1FE4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -320,13 +336,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5HFKSE2QXG;
+				DEVELOPMENT_TEAM = JGMUD2VWJ4;
 				INFOPLIST_FILE = RealityMath/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.shiyucheng.RealityMath;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dinglei.RealityMath;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -337,13 +353,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5HFKSE2QXG;
+				DEVELOPMENT_TEAM = JGMUD2VWJ4;
 				INFOPLIST_FILE = RealityMath/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.shiyucheng.RealityMath;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dinglei.RealityMath;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

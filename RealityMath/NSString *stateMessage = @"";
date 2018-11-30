@@ -1,0 +1,15 @@
+    NSString *stateMessage = @"";
+    if (trackingstate == ARTrackingStateNormal && frame.anchors == NULL) {
+        stateMessage = @"请移动设备以查找水平平面";
+    }else if (trackingstate == ARTrackingStateNotAvailable){
+        stateMessage = @"不支持当前设备";
+    }else if (trackingstate == ARTrackingStateReasonExcessiveMotion){
+        stateMessage = @"请缓慢移动设备";
+    }else if (trackingstate == ARTrackingStateReasonInitializing){
+        stateMessage = @"初始化AR会话中";
+    }else if (trackingstate == ARTrackingStateReasonInsufficientFeatures){
+        stateMessage = @"请在有明显特征的平面上移动设备";
+    }
+    
+    self.infoLabel.text = stateMessage;
+}

@@ -19,6 +19,7 @@
 //信息显示窗口
 @property (nonatomic, strong) UIView *infoView;
 @property (nonatomic, strong) UILabel *infoLabel;
+@property (strong, nonatomic) UILabel *mappingStatusLabel;
 
 //Scene场景
 @property (nonatomic, strong) ARSCNView *sceneView;
@@ -70,6 +71,7 @@
     [self.view addSubview:self.infoView];
     [self.view addSubview:self.infoLabel];
     [self.view addSubview:self.backButton];
+    [self.view addSubview:self.mappingStatusLabel];
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -149,8 +151,16 @@
 //更新信息Label
 - (void)updateInfoLabel:(ARFrame *)frame andState: (ARTrackingState)trackingstate{
     NSString *stateMessage = @"";
-    if (trackingstate == ARTrackingStateNormal && frame.anchors == NULL) {
-        stateMessage = @"请移动设备以查找水平平面";
+    NSArray *arr1 = frame.anchors;
+    NSArray *arr2 = [self.multipeerSession getConnectedPeers];
+    if (trackingstate == ARTrackingStateNormal) {
+        if (arr1==nil && [arr1 isKindOfClass:[NSNull class]]&&arr1.count==0 &&arr2==nil && [arr2 isKindOfClass:[NSNull class]]&&arr2.count==0) {
+            stateMessage = @"请移动设备以查找水平平面";
+        }
+        if (arr2!=nil && ![arr2 isKindOfClass:[NSNull class]]&&arr2.count!=0 && self.mapProvider == nil) {
+            MCPeerID *peer = [self.multipeerSession getConnectedPeers][0];
+            stateMessage = [NSString stringWithFormat:@"连接到%@",peer.displayName];
+        }
     }else if (trackingstate == ARTrackingStateNotAvailable){
         stateMessage = @"不支持当前设备";
     }else if (trackingstate == ARTrackingStateReasonExcessiveMotion){
@@ -160,11 +170,35 @@
     }else if (trackingstate == ARTrackingStateReasonInsufficientFeatures){
         stateMessage = @"请在有明显特征的平面上移动设备";
     }
+    if (trackingstate == ARTrackingStateLimited && trackingstate == ARTrackingStateReasonInitializing && self.mapProvider != nil){
+        MCPeerID *peer = [self.multipeerSession getConnectedPeers][0];
+        stateMessage = [NSString stringWithFormat:@"接收到%@的信息",peer.displayName];
+    }
     
     self.infoLabel.text = stateMessage;
 }
 
 - (void)session:(ARSession *)session didUpdateFrame:(ARFrame *)frame{
+    NSString *message = [[NSString alloc] init];
+    switch (frame.worldMappingStatus) {
+        case ARWorldMappingStatusNotAvailable:
+            self.sendMapButton.enabled = NO;
+            message = @"不可分享";
+            break;
+        case ARWorldMappingStatusLimited:
+            self.sendMapButton.enabled = NO;
+            message = @"不可分享";
+            break;
+        case ARWorldMappingStatusExtending:
+            self.sendMapButton.enabled = [self.multipeerSession getConnectedPeers]!=nil && ![[self.multipeerSession getConnectedPeers] isKindOfClass:[NSNull class]]&&[self.multipeerSession getConnectedPeers].count!=0;
+            message = @"分享位置不可定";
+            break;
+        case ARWorldMappingStatusMapped:
+            self.sendMapButton.enabled = [self.multipeerSession getConnectedPeers]!=nil && ![[self.multipeerSession getConnectedPeers] isKindOfClass:[NSNull class]]&&[self.multipeerSession getConnectedPeers].count!=0;
+            message = @"可分享";
+            break;
+    }
+    self.mappingStatusLabel.text = message;
     [self updateInfoLabel:frame andState:frame.camera.trackingState];
 }
 
@@ -203,6 +237,7 @@
         // Reset tracking and/or remove existing anchors if consistent tracking is required
     self.infoLabel.text = @"Session interruption ended";
 }
+
 
 - (BOOL)sessionShouldAttemptRelocalization:(ARSession *)session{
     return YES;
@@ -274,6 +309,14 @@
     }
     
     return _backButton;
+}
+- (UILabel *)mappingStatusLabel{
+    if (!_mappingStatusLabel) {
+        _mappingStatusLabel = [[UILabel alloc] initWithFrame: CGRectMake(20, 35, 200, 30)];
+        _mappingStatusLabel.backgroundColor = [UIColor clearColor];
+        _mappingStatusLabel.textAlignment = NSTextAlignmentLeft;
+    }
+    return _mappingStatusLabel;
 }
 
 - (void)back{
