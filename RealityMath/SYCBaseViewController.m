@@ -31,8 +31,8 @@
 @property (retain, nonatomic) MultipeerSession *multipeerSession;
 @property (strong, nonatomic) MCPeerID *mapProvider;
 @property (strong, nonatomic) UIButton *sendMapButton;//分享按钮
-//@property (strong, nonatomic) UIButton *resetButton;   //重置按钮
-//@property (strong, nonatomic) UITapGestureRecognizer *tapGesture;   //点击手势
+
+@property (nonatomic, strong) UIButton *backButton;
 
 @end
 
@@ -65,11 +65,10 @@
 
 //初始化UI
 - (void)setupUI{
-//    [self.view addGestureRecognizer:self.tapGesture];
     [self.view addSubview:self.sendMapButton];
-//    [self.view addSubview:self.resetButton];
-    [self.view addSubview:self.infoLabel];
     [self.view addSubview:self.infoView];
+    [self.view addSubview:self.infoLabel];
+    [self.view addSubview:self.backButton];
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -229,13 +228,6 @@
 
 #pragma mark - 懒加载
 
-//- (UITapGestureRecognizer *)tapGesture{
-//    if (!_tapGesture) {
-//        _tapGesture = [[UITapGestureRecognizer alloc]initWithTarget: self action: @selector(handleSceneTap:)];
-//    }
-//    return _tapGesture;
-//}
-
 - (UIButton *)sendMapButton{
     if (!_sendMapButton) {
         _sendMapButton = [[UIButton alloc] initWithFrame:CGRectMake(20, SCREEN_HEIGHT - 80, 50, 50)];
@@ -245,37 +237,6 @@
         [_sendMapButton addTarget:self action:@selector(shareSession:) forControlEvents:UIControlEventTouchDown];
     }
     return _sendMapButton;
-}
-
-//- (UIButton *)resetButton{
-//    if (!_resetButton) {
-//        _resetButton = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH-50, 40, 30, 30)];
-//        [_resetButton setBackgroundImage:[UIImage imageNamed:@"restart"] forState:UIControlStateNormal];
-//        [_resetButton setBackgroundImage:[UIImage imageNamed:@"restartPressed"] forState:UIControlStateHighlighted];
-//        _resetButton.backgroundColor = [UIColor clearColor];
-//        [_resetButton addTarget:self action:@selector(resetTracking:) forControlEvents:UIControlEventTouchDown];
-//    }
-//    return _resetButton;
-//}
-
-#pragma mark - sharing
-    //手势调用方法
-- (void)handleSceneTap:(UITapGestureRecognizer *)tapGesture{
-    NSArray *hitResultArr = [_sceneView hitTest:[tapGesture locationInView:_sceneView] types:ARHitTestResultTypeExistingPlane | ARHitTestResultTypeEstimatedHorizontalPlane];
-    if (hitResultArr!=nil && ![hitResultArr isKindOfClass:[NSNull class]]&&hitResultArr.count!=0) {
-        ARHitTestResult *hitResult = hitResultArr[0];
-        ARAnchor *anchor = [[ARAnchor alloc] initWithName:@"founction" transform: hitResult.worldTransform];
-        
-            //可以在这里添加note，可定位添加
-        [_sceneView.session addAnchor: anchor];
-        NSLog(@"%@",anchor);
-        NSData *data = [NSKeyedArchiver archivedDataWithRootObject:anchor requiringSecureCoding:YES error:nil];
-        [self.multipeerSession sendToAllPeers:data];
-    }
-    else{
-        self.infoLabel.text = @"Your tap location can't located";
-    }
-    
 }
 
 - (UIView *)infoView{
@@ -295,8 +256,23 @@
 - (UILabel *)infoLabel{
     if (!_infoLabel) {
         self.infoLabel = [[UILabel alloc] initWithFrame:self.infoView.frame];
+        self.infoLabel.textColor = [UIColor blackColor];
         self.infoLabel.textAlignment = NSTextAlignmentCenter;
     }
     return _infoLabel;
+}
+
+- (UIButton *)backButton{
+    if (!_backButton) {
+        _backButton = [[UIButton alloc] initWithFrame:CGRectMake(20, 100, 50, 50)];
+        [_backButton setImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
+        [_backButton addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
+    }
+    
+    return _backButton;
+}
+
+- (void)back{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 @end

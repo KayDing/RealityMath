@@ -20,13 +20,14 @@
     [super viewDidLoad];
     [self.tableView registerClass:[SelectionCell class] forCellReuseIdentifier:@"SelectionCell"];
     
-    self.tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
-    self.tableView.backgroundColor = [UIColor grayColor];
+    [self setupTableView];
     
 }
 
-- (void)setUpTableView{
-    
+- (void)setupTableView{
+    self.tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
+    self.tableView.backgroundColor = [UIColor grayColor];
+    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
 }
 
 

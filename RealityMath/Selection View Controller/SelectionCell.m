@@ -35,7 +35,8 @@
 }
 
 - (void)drawRect:(CGRect)rect{
-    self.backgroundColor = [UIColor clearColor];
+    [self setBackgroundColor:[UIColor blueColor]];
+    [self setSelectionStyle:UITableViewCellSelectionStyleNone];
     
     [self addSubview:self.bgView];
     [self addSubview:self.titleLabel];
@@ -49,7 +50,7 @@
     CGFloat bgHeight = 100 * 0.9;
     CGFloat bgWidth = SCREEN_WIDTH * 0.95;
     _bgView = [[UIView alloc] initWithFrame:CGRectMake((SCREEN_WIDTH - bgWidth) * 0.5, (100 - bgHeight) * 0.5, bgWidth, bgHeight)];
-    [_bgView.layer setCornerRadius:25.0];
+    [_bgView.layer setCornerRadius:35.0];
     [_bgView.layer setMasksToBounds:YES];
     _bgView.backgroundColor = [UIColor redColor];
     return _bgView;

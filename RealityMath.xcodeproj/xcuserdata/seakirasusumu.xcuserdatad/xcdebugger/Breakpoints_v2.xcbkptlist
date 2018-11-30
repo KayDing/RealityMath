@@ -36,12 +36,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RealityMath/Selection View Controller/SYCSelectionViewController.m"
-            timestampString = "565201300.1162291"
+            timestampString = "565234783.784834"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "-setUpTableView"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "-setupTableView"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -52,29 +52,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RealityMath/Selection View Controller/SYCSelectionViewController.m"
-            timestampString = "565201300.116534"
+            timestampString = "565234783.784914"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "20"
             endingLineNumber = "20"
             landmarkName = "-viewDidLoad"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RealityMath/SYCBaseViewController.m"
-            timestampString = "565201300.1166281"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "231"
-            endingLineNumber = "231"
-            landmarkName = "SYCBaseViewController"
-            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
