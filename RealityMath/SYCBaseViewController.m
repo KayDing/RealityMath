@@ -41,6 +41,7 @@
 
 @implementation SYCBaseViewController{
     NSString *modelName;
+    bool isDisplayed;
 }
 
 //重载init方法，使得调用模型的名字作为参数
@@ -103,18 +104,22 @@
 #pragma mark - ARSCNViewDelegate
 //添加节点时调用
 - (void)renderer:(id<SCNSceneRenderer>)renderer didAddNode:(SCNNode *)node forAnchor:(ARAnchor *)anchor{
+    NSLog(@"%i", isDisplayed);
+    if (isDisplayed) {
+        return;
+    }
     
     if ([anchor isMemberOfClass:[ARPlaneAnchor class]]) {
         [SYCPlaneModel shardInstance].anchor = (ARPlaneAnchor *)anchor;
         SYCPlane *plane = [[SYCPlane alloc] initWithAnchor:(ARPlaneAnchor *)anchor sceneView:self.sceneView];
         [node addChildNode:plane];
-        
         SCNScene *modelScene = [SCNScene sceneNamed:[NSString stringWithFormat:@"Assets.scnassets/%@.scn", modelName]];
         SCNNode *modelNode = modelScene.rootNode.childNodes[0];
         modelNode.position = SCNVector3Make([SYCPlaneModel shardInstance].anchor.center.x, 0, [SYCPlaneModel shardInstance].anchor.center.z);
         
         modelNode.light.type = SCNLightTypeOmni;
         [node addChildNode:modelNode];
+        isDisplayed = YES;
     }
 }
 
@@ -139,7 +144,6 @@
     SCNNode *lightNode = [[SCNNode alloc] init];
     lightNode.light.attenuationStartDistance = 20.0;
     lightNode.light.attenuationEndDistance = 1.0;
-    
 }
 
 //更新信息Label
