@@ -12,13 +12,18 @@
 
 @interface SYCPlane()
 
+@property (nonatomic) CGFloat aspectRatio;
+@property (nonatomic) CGSize preferredSize;
+
 @end
 
-@implementation SYCPlane
+@implementation SYCPlane{
 
 
-- (instancetype)initWithAnchor:(ARPlaneAnchor *)anchor sceneView:(ARSCNView *)scene
-{
+}
+
+
+- (instancetype)initWithAnchor:(ARPlaneAnchor *)anchor sceneView:(ARSCNView *)scene{
     self = [super init];
     if (self) {
         ARSCNPlaneGeometry *meshGeometry = [ARSCNPlaneGeometry planeGeometryWithDevice:scene.device];
@@ -43,16 +48,55 @@
 - (void)setUpMeshVisualStyle{
     self.meshNode.opacity = 0.25;
     SCNMaterial *material = self.meshNode.geometry.firstMaterial;
-    material.diffuse.contents = [UIColor blueColor];
+    material.diffuse.contents = [UIColor whiteColor];
+    
+//    material.diffuse.contents = [UIImage imageNamed:@"grid.png"];
+//
+//    vector_float3 vector;
+//    vector.x = 40;
+//    vector.y = 40 * _aspectRatio;
+//    vector.z = 1;
+//
+//    simd_float4x4 textureScale;
+//    textureScale.columns[0] = simd_make_float4(vector.x, 0, 0, 0);
+//    textureScale.columns[1] = simd_make_float4(0, vector.y, 0, 0);
+//    textureScale.columns[2] = simd_make_float4(0, 0, vector.z, 0);
+//    textureScale.columns[3] = simd_make_float4(0, 0, 0, 1);
+//
+//    material.diffuse.contentsTransform = SCNMatrix4FromMat4(textureScale);
+//
+//
+//    material.emission.contents = [UIImage imageNamed:@"grid.png"];
+//    material.emission.contentsTransform = SCNMatrix4FromMat4(textureScale);
+//    [material setDoubleSided:YES];
+//    material.diffuse.wrapS = SCNWrapModeRepeat;
+//    material.diffuse.wrapT = SCNWrapModeRepeat;
+//    material.ambient.contents = [UIColor blackColor];
+//    material.lightingModelName = SCNLightingModelConstant;
 }
 
 - (void)setUpExtentVisualStyle{
     self.extentNode.opacity = 0.6;
     SCNMaterial *material = self.extentNode.geometry.firstMaterial;
-    material.diffuse.contents = [UIColor blueColor];
+    material.diffuse.contents = [UIColor whiteColor];
+    
     
     NSString *path = [[NSBundle mainBundle] pathForResource:@"wireframe_shader" ofType:@"metal" inDirectory:@"Assets.scnassets"];
     NSString *shader = [[NSString alloc] initWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
     material.shaderModifiers = @{SCNShaderModifierEntryPointSurface:shader};
+}
+
+- (CGSize)preferredSize{
+    if (_preferredSize.width == 1.5 && _preferredSize.height == 2.7) {
+        return _preferredSize;
+    }
+    return CGSizeMake(1.5, 2.7);
+}
+
+- (CGFloat)aspectRatio{
+    if (_aspectRatio) {
+        return _aspectRatio;
+    }
+    return _preferredSize.height / _preferredSize.width;
 }
 @end

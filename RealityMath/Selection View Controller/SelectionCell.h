@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SelectionCell : UITableViewCell
 
-@property(nonatomic, strong) NSString *modelName;
+
 
 - (instancetype)initWithModelName:(NSString *)modelName;
 
