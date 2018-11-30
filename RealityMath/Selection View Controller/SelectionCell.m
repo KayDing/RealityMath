@@ -16,7 +16,7 @@
 @property (nonatomic, strong) UIView *bgView;
 @property (nonatomic, strong) UILabel *titleLabel;
 @property (nonatomic, strong) UIImageView *image;
-@property(nonatomic, strong) NSString *modelName;
+@property (nonatomic, strong) NSString *modelName;
 
 @end
 
@@ -30,12 +30,13 @@
     self = [super init];
     if (self) {
         self.modelName = name;
+        [self setBackgroundColor:[UIColor colorWithRed:246/255.0 green:246/255.0 blue:246/255.0 alpha:1.0]];
     }
     return self;
 }
 
 - (void)drawRect:(CGRect)rect{
-    [self setBackgroundColor:[UIColor blueColor]];
+    [self setBackgroundColor:[UIColor colorWithRed:246/255.0 green:246/255.0 blue:246/255.0 alpha:1.0]];
     [self setSelectionStyle:UITableViewCellSelectionStyleNone];
     
     [self addSubview:self.bgView];
@@ -52,7 +53,7 @@
     _bgView = [[UIView alloc] initWithFrame:CGRectMake((SCREEN_WIDTH - bgWidth) * 0.5, (100 - bgHeight) * 0.5, bgWidth, bgHeight)];
     [_bgView.layer setCornerRadius:35.0];
     [_bgView.layer setMasksToBounds:YES];
-    _bgView.backgroundColor = [UIColor redColor];
+    _bgView.backgroundColor = [UIColor whiteColor];
     return _bgView;
 }
 

@@ -26,7 +26,7 @@
 
 - (void)setupTableView{
     self.tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
-    self.tableView.backgroundColor = [UIColor grayColor];
+    self.tableView.backgroundColor = [UIColor colorWithRed:246/255.0 green:246/255.0 blue:246/255.0 alpha:1.0];
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
 }
 
